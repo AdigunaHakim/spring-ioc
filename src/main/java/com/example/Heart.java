@@ -7,7 +7,11 @@ public class Heart {
         this.noOfHeart = noOfHeart;
     }
 
-    public void pumping(){
+    public int getNoOfHeart() {
+        return noOfHeart;
+    }
+
+    public void pumping() {
         System.out.println("start pumping with " + noOfHeart + " heart");
     }
 }

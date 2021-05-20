@@ -7,7 +7,11 @@ public class Brain {
         this.noOfBrain = noOfBrain;
     }
 
-    public void thinking(){
+    public int getNoOfBrain() {
+        return noOfBrain;
+    }
+
+    public void thinking() {
         System.out.println("start thinking with " + noOfBrain + " brain");
     }
 }
