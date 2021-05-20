@@ -21,6 +21,9 @@ public class Main implements CommandLineRunner {
     @Autowired
     private Student student;
 
+    @Autowired
+    private Student student1;
+
     public static void main(String[] args) {
         SpringApplication.run(Main.class, args);
     }
@@ -28,5 +31,7 @@ public class Main implements CommandLineRunner {
     public void run(String... args) {
         logger.info(pojo.getField());
         student.cheating();
+        System.out.println("student : " +student);
+        System.out.println("student1 : " +student1);
     }
 }

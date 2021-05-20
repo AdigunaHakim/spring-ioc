@@ -13,7 +13,7 @@
 
     <bean id="scienceCheat" class="com.example.ScienceCheat"/>
 
-    <bean id="student" class="com.example.Student">
+    <bean id="student" class="com.example.Student" scope="prototype">
         <property name="cheat" ref="scienceCheat"/>
     </bean>
 </beans>
