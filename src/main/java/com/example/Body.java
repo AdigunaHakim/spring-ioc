@@ -1,11 +1,13 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+
 public class Body {
     private Brain brain;
     private Heart heart;
     private Lungs lungs;
 
-    public void setBrain(Brain brain) {
+    public void setBrain(@Qualifier("humanBrain") Brain brain) {
         this.brain = brain;
         System.out.println("setBrain called, no of brain : " + brain.getNoOfBrain());
     }
@@ -20,7 +22,7 @@ public class Body {
         System.out.println("setLungs called, no of lungs : " + lungs.getNoOfLungs());
     }
 
-    public Body(Brain brain, Heart heart, Lungs lungs) {
+    public Body(@Qualifier("humanBrain") Brain brain, Heart heart, Lungs lungs) {
         this.brain = brain;
         this.heart = heart;
         this.lungs = lungs;
