@@ -11,7 +11,9 @@
 
     <bean id="mathCheat" class="com.example.MathCheat"/>
 
+    <bean id="scienceCheat" class="com.example.ScienceCheat"/>
+
     <bean id="student" class="com.example.Student">
-        <property name="mathCheat" ref="mathCheat"/>
+        <property name="cheat" ref="scienceCheat"/>
     </bean>
 </beans>
