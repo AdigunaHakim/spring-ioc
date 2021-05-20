@@ -10,8 +10,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = SpringBootXmlApplication.class)
-public class SpringBootXmlApplicationIntegrationTest {
+@SpringBootTest(classes = Main.class)
+public class MainIntegrationTest {
 
     @Autowired private Pojo pojo;
     @Value("${sample}") private String sample;

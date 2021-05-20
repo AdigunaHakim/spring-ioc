@@ -12,17 +12,21 @@ import org.springframework.context.annotation.ImportResource;
 @Configuration
 @EnableAutoConfiguration
 @ImportResource("classpath:beans.xml")
-public class SpringBootXmlApplication implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
-    private static final Logger logger = LoggerFactory.getLogger(SpringBootXmlApplication.class);
+    private static final Logger logger = LoggerFactory.getLogger(Main.class);
 
     @Autowired private Pojo pojo;
 
+    @Autowired
+    private Student student;
+
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootXmlApplication.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     public void run(String... args) {
         logger.info(pojo.getField());
+        student.cheating();
     }
 }
