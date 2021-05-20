@@ -5,10 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="com.example.Pojo">
-        <property name="field" value="${sample}"></property>
-    </bean>
-
     <bean id="mathCheat" class="com.example.MathCheat"/>
 
     <bean id="student" class="com.example.Student">
