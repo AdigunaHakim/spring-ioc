@@ -1,5 +1,8 @@
 package com.example;
 
+import org.springframework.stereotype.Component;
+
+@Component("brain")
 public class Brain {
     private int noOfBrain;
 

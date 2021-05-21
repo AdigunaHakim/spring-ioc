@@ -1,14 +1,13 @@
 package com.example;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@ImportResource("classpath:beans.xml")
+
 public class Human {
 
     public static void main(String[] args) {
-        ApplicationContext context = SpringApplication.run(Human.class, args);
+        ApplicationContext context = new AnnotationConfigApplicationContext(HumanConfig.class);
         Body humanBody = context.getBean("humanBody", Body.class);
         humanBody.living();
     }

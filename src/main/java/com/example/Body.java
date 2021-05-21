@@ -1,7 +1,9 @@
 package com.example;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component("humanBody")
 public class Body {
     private Brain brain;
     private Heart heart;
